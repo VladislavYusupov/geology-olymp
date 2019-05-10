@@ -1,0 +1,49 @@
+.Navigation-panel {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161d26;
+}
+
+.Brand {
+    width: 15%;
+    text-align: center;
+    size: 24px;
+    color: white;
+}
+
+.Brand h2 {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.Link-bar {
+    height: inherit;
+    text-align: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.Link-item {
+    margin-left: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.Link-item:hover {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid;
+}
+
+.Login {
+    text-align: center;
+    width: 15%;
+    color: white;
+    cursor: pointer;
+}

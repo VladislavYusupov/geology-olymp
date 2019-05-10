@@ -1,13 +1,23 @@
-.App {
-  text-align: center;
+#root {
   width: 100vw;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App-nav {
+  height: 5vh;
+  width: inherit;
+}
+
+.App-content {
+  height: 95vh;
+  width: inherit;
+  text-align: center;
   overflow: auto;
+  background: url('images/start-background.jpg') no-repeat center center;
+  background-size: cover;
 }

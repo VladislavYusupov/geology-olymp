@@ -1,15 +1,23 @@
 import React, {Component} from "react";
 import "../css/Start.css";
-import {Button} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
+import {Button} from "react-bootstrap";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
+import {actionCreators} from "../reducers";
 
-export default class StartPage extends Component {
+class StartPage extends Component {
     render() {
         return (
             <div className="Main-text">
                 <h1>Добро пожаловать на сайт проведения Уральской геологической олимпиады</h1>
-                <Button bsPrefix="Main-button">Информация о проведении</Button>
+                <Button bsPrefix="Main-button" onClick={() => this.props.selectPage('Information')}>Информация о проведении</Button>
             </div>
         );
     }
 }
+
+export default connect(
+    null,
+    dispatch => bindActionCreators(actionCreators, dispatch)
+)(StartPage);
