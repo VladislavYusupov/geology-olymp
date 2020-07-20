@@ -8,9 +8,11 @@ import InformationPage from "./components/pages/InformationPage";
 import ParticipantsPage from "./components/pages/ParticipantsPage";
 import ManagersPage from "./components/pages/ManagersPage";
 import {connect} from "react-redux";
+import {pages} from "./const/PagesConst";
 
 
-class App extends React.Component{
+class App extends React.Component {
+
     render() {
         return (
             <div className="App">
@@ -18,11 +20,7 @@ class App extends React.Component{
                     <Header/>
                 </div>
                 <div className="App-content">
-                    {/*<StartPage/>*/}
                     {renderContent(this.props.page)}
-
-                    {/*<img src={back} alt="Logo"/>*/}
-
                 </div>
             </div>
         );
@@ -31,13 +29,13 @@ class App extends React.Component{
 
 const renderContent = type => {
     switch (type) {
-        case 'Main' :
+        case pages.MAIN :
             return <StartPage/>;
-        case 'Information':
+        case pages.INFORMATION:
             return (<InformationPage/>);
-        case 'Participants':
+        case pages.PARTICIPANTS:
             return (<ParticipantsPage/>);
-        case 'Managers' :
+        case pages.MANAGERS:
             return (<ManagersPage/>);
     }
 };

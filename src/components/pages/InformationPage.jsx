@@ -3,6 +3,7 @@ import './InformationPage.css';
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import {actionCreators} from "../../reducers";
+import {pages} from "../../const/PagesConst";
 
 class InformationPage extends Component {
     render() {
@@ -46,13 +47,13 @@ class InformationPage extends Component {
 
 const managersLink = props => {
     return (
-        <a href="#" onClick={() => props.selectPage('Managers')}>Руководителям</a>
+        <a href="#" onClick={() => props.selectPage(pages.MANAGERS)}>Руководителям</a>
     );
 }
 
 const participantsLink = props => {
     return (
-        <a href="#" onClick={() => props.selectPage('Participants')}>Участникам</a>
+        <a href="#" onClick={() => props.selectPage(pages.PARTICIPANTS)}>Участникам</a>
     );
 };
 

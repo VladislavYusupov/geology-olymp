@@ -5,22 +5,10 @@ import {bindActionCreators} from "redux";
 import {actionCreators} from "../reducers";
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            brand: false
-        };
-        this.handleOver = this.handleOver.bind(this);
-    }
-
-    handleOver() {
-
-    }
-
     render() {
         return (
             <div className="Navigation-panel">
-                <div className="Brand" onMouseOver={this.handleOver}>
+                <div className="Brand">
                     <h2 onClick={() => this.props.selectPage('Main')}>
                         Олимпиада</h2>
                 </div>

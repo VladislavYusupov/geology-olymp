@@ -1,6 +1,8 @@
+import {pages} from "./../const/PagesConst";
+
 const selectPageType = 'SELECT_PAGE';
 const initialState = {
-    page: 'Main'
+    page: pages.MAIN
 };
 
 export const actionCreators = {
@@ -10,7 +12,6 @@ export const actionCreators = {
 export function rootReducer(state = initialState, action) {
 
     if (action.type === selectPageType) {
-        console.log(action.payload);
         return {
             ...state,
             page: action.payload
