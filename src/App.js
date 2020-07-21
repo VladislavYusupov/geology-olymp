@@ -3,13 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import StartPage from "./components/StartPage";
 import Header from "./components/Header";
-import back from './images/start-background.jpg';
 import InformationPage from "./components/pages/InformationPage";
 import ParticipantsPage from "./components/pages/ParticipantsPage";
 import ManagersPage from "./components/pages/ManagersPage";
 import {connect} from "react-redux";
 import {pages} from "./const/PagesConst";
-
 
 class App extends React.Component {
 
